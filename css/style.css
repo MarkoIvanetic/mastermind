@@ -1,0 +1,70 @@
+body{
+  background-color: gray;
+  color: white;
+}
+.whiteRow60{
+  min-height: 60px;
+}
+.whiteRow20{
+  min-height: 20px;
+}
+.whiteRow6{
+  min-height: 2px;
+}
+.gamePanel{
+  background-color: red; /*DELETE*/
+  min-height: 800px; /*DELETE*/
+  width: 688.2857142864px;
+}
+.colorPanel{
+  min-width: 274.285714286px;
+  background-color: purple; /*DELETE*/
+  min-height: 600px; /*DELETE*/
+}
+.resultPanel{
+  background-color: yellow; /*DELETE*/
+  min-height: 300px; /*DELETE*/
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+.buttonPanel{
+  background-color: green; /*DELETE*/
+}
+.finalSolution{
+  background-color: blue; /*DELETE*/
+  min-height: 100px; /*DELETE*/
+}
+.colorSection, .resultColorRow, .colorButton{
+  background-color: green; /*DELETE*/
+  margin-top: 10px;
+}
+.colorSection:last-child, .resultColorRow:last-child, .colorButton:last-child{
+  margin-bottom: 10px;
+}
+.colors{
+  margin-top: 3px;
+  margin-bottom:3px;
+}
+.colors, .colorButton{
+  background-color: black; /*DELETE*/
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.resultColor{
+  background-color: black; /*DELETE*/
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+.resultColorRow div:nth-of-type(2), .resultColorRow div:nth-of-type(5){
+  margin-right: 10%;
+  margin-left: 7.5%;
+}
+.questionMark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}

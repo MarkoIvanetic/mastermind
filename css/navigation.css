@@ -1,0 +1,49 @@
+.navigation {
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  border-top: 2px solid #444;
+  border-bottom: 2px solid #444;
+}
+.navigation li {
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+}
+ 
+ .active {
+  background-color: #3498db;
+  cursor: default;
+}
+
+.navigation a {
+  color: #fff;
+  text-decoration: none!important;
+  display: block;
+  transition: .3s background-color;
+}
+ 
+.navigation a:hover {
+  background-color: #3498db;
+}
+ 
+@media screen and (min-width: 600px) {
+  .navigation li {
+    width: 220px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px!important;
+    font-size: 1.4em!important;
+  }
+  .big-link{
+    width: 50px!important;
+  }
+ 
+  /* Option 1 - Display Inline */
+  .navigation li {
+    display: inline-block;
+    margin-right: -4px;
+  }
