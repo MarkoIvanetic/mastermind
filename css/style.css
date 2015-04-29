@@ -28,14 +28,14 @@ body{
   border-right: 2px solid black;
 }
 .buttonPanel{
-  background-color: green; /*DELETE*/
+  background-color: olive; /*DELETE*/
 }
 .finalSolution{
   background-color: blue; /*DELETE*/
   min-height: 100px; /*DELETE*/
 }
 .colorSection, .resultColorRow, .colorButton{
-  background-color: green; /*DELETE*/
+  background-color: olive; /*DELETE*/
   margin-top: 10px;
 }
 .colorSection:last-child, .resultColorRow:last-child, .colorButton:last-child{
