@@ -24,7 +24,7 @@
 	for(i = 0; i < 4; i++) {
      solution.push(colors[Math.floor(Math.random()*colors.length)]);
 	}
-
+	$('.colorSection:nth-child('+ rowCounter +')').css("background-color","#39B544");
 	//Reset button
 	$('#reset').click(function(){
 		location.reload();
@@ -42,8 +42,8 @@
 
 	$('#submit').click(function(){
 		//History row color here
-		$('.colorSection:nth-child('+ rowCounter +')').css("background-color","#543A55");
-		$('.colorSection:nth-child('+ (rowCounter+1) +')').css("background-color","#00FF00");
+		$('.colorSection:nth-child('+ rowCounter +')').css("background-color","#899797");
+		$('.colorSection:nth-child('+ (rowCounter+1) +')').css("background-color","#39B544");
 		//iterate ColorSections and reset colors
 		$('#submit').attr('disabled','disabled');
 		$('#submit').removeClass('activeButton');

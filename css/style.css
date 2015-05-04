@@ -1,5 +1,4 @@
 body{
-  background-color: gray;
   color: white;
 }
 .whiteRow60{
@@ -12,7 +11,7 @@ body{
   min-height: 2px;
 }
 .gamePanel{
-  background-color: red; /*DELETE*/
+  background-color: #333333; /*DELETE*/
   min-height: 800px; /*DELETE*/
   width: 688.2857142864px;
 }
@@ -28,13 +27,13 @@ body{
   border-right: 2px solid black;
 }
 .buttonPanel{
-  background-color: olive; /*DELETE*/
+  background-color: #798374; /*DELETE*/
 }
 .finalSolution{
   background-color: blue; /*DELETE*/
 }
 .colorSection, .resultColorRow, .colorButton{
-  background-color: olive; /*DELETE*/
+  background-color: #899797; /*DELETE*/
   margin-top: 10px;
 }
 .colorSection:last-child, .resultColorRow:last-child, .colorButton:last-child{
