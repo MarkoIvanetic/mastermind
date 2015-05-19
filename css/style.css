@@ -1,4 +1,5 @@
 body{
+  background-color: #C0AFA8;
   color: white;
 }
 .whiteRow60{
@@ -11,29 +12,29 @@ body{
   min-height: 2px;
 }
 .gamePanel{
-  background-color: #333333; /*DELETE*/
+  background-color: #B33A32; /*DELETE*/
   min-height: 800px; /*DELETE*/
   width: 688.2857142864px;
 }
 .colorPanel{
   min-width: 274.285714286px;
-  background-color: purple; /*DELETE*/
+  background-color: rgba(86,93,103,1); /*DELETE*/
   min-height: 600px; /*DELETE*/
 }
 .resultPanel{
-  background-color: yellow; /*DELETE*/
+ background-color: rgba(86,93,103,1);
   min-height: 300px; /*DELETE*/
   border-left: 2px solid black;
   border-right: 2px solid black;
 }
 .buttonPanel{
-  background-color: #798374; /*DELETE*/
+  background-color: #4D82B3; /*DELETE*/
 }
 .finalSolution{
-  background-color: blue; /*DELETE*/
+  background-color: #4D82B3; /*DELETE*/
 }
 .colorSection, .resultColorRow, .colorButton{
-  background-color: #899797; /*DELETE*/
+ background-color: rgba(150,180,207,0.7); /*DELETE*/
   margin-top: 10px;
 }
 .colorSection:last-child, .resultColorRow:last-child, .colorButton:last-child{
@@ -66,15 +67,22 @@ body{
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
+button[disabled=disabled], button:disabled {
+    background: #95B2CC;
+}
 .buttonPanel button{
   vertical-align: top;
   height: 40px;
   padding: 0;
+  border-bottom: 1px;
+  border-top: 1px;
+  border-right: 1px;
+  border-left: 0.5px;
+  border-color: black;
+  border-style: solid;
   font-size: 14px;
   color: white;
   text-align: center;
-  background: #808289;
-  border: 0;
   cursor: pointer;
   transition: background 0.5s;
 }
@@ -82,5 +90,5 @@ body{
  background: #208C4E;
 }
 .activeButton{
-  background: #2ecc71!important;
+  background: #375D80;
 }

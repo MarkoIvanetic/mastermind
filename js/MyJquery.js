@@ -21,10 +21,17 @@
 		i++;
 	})/*End Assign colors to colorButtons*/
 	/*Define a solution, random color push to solution array*/
+	var tempColors = colors.slice();
+	var randomColor;
 	for(i = 0; i < 4; i++) {
-     solution.push(colors[Math.floor(Math.random()*colors.length)]);
+	randomColor = Math.floor(Math.random()*colors.length);
+	if (tempColors[randomColor]=="CHECKED") {i--;}
+	else{
+     solution.push(tempColors[randomColor]);
+     tempColors[randomColor]="CHECKED";
+ }
 	}
-	$('.colorSection:nth-child('+ rowCounter +')').css("background-color","#39B544");
+
 	//Reset button
 	$('#reset').click(function(){
 		location.reload();
@@ -42,8 +49,8 @@
 
 	$('#submit').click(function(){
 		//History row color here
-		$('.colorSection:nth-child('+ rowCounter +')').css("background-color","#899797");
-		$('.colorSection:nth-child('+ (rowCounter+1) +')').css("background-color","#39B544");
+		$('.colorSection:nth-child('+ rowCounter +')').css("background-color","#262D34");
+		$('.colorSection:nth-child('+ (rowCounter+1) +')').css("background-color","#4D82B3");
 		//iterate ColorSections and reset colors
 		$('#submit').attr('disabled','disabled');
 		$('#submit').removeClass('activeButton');
@@ -91,7 +98,7 @@
 		*/
 		if (arr1[0]==arr2[0] && arr1[1]==arr2[1] && arr1[2]==arr2[2] && arr1[3]==arr2[3]){
 			revealSolution();
-			$('#clea').removeClass('activeButton');
+			$('#clear').removeClass('activeButton');
 		}
 		for(i = 0; i < 4; i++) {
 			if	(jQuery.inArray(arr1[i],tempSolution)==i){
