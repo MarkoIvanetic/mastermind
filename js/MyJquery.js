@@ -14,6 +14,13 @@
 	var verdit = [];
 	var tempSolution = [];
 
+	var revealSolution = function(){
+		for(i = 0; i < 4; i++) {
+		$(".finalSolutionColorSection .colors:eq(" + i +")")
+		.css("background-color", solution[i]).text("");
+		}
+	}
+
 	/*Assign colors to colorButtons*/
 	var colors = ["red","blue","yellow","green","purple","orange"];
 	$('.colorButton').each(function(){
@@ -25,12 +32,8 @@
 	var randomColor;
 	for(i = 0; i < 4; i++) {
 	randomColor = Math.floor(Math.random()*colors.length);
-	if (tempColors[randomColor]=="CHECKED") {i--;}
-	else{
      solution.push(tempColors[randomColor]);
-     tempColors[randomColor]="CHECKED";
  }
-	}
 
 	//Reset button
 	$('#reset').click(function(){
@@ -99,20 +102,22 @@
 		if (arr1[0]==arr2[0] && arr1[1]==arr2[1] && arr1[2]==arr2[2] && arr1[3]==arr2[3]){
 			revealSolution();
 			$('#clear').removeClass('activeButton');
-		}
+			verdit.push(2,2,2,2);
+			$(".congratz").show();
+		} else {
 		for(i = 0; i < 4; i++) {
 			if	(jQuery.inArray(arr1[i],tempSolution)==i){
 				verdit.push(2);
 				tempSolution[i] = "checked";
-			}
-			else if	(tempSolution[jQuery.inArray(arr1[i],tempSolution)]!="checked" && jQuery.inArray(arr1[i],tempSolution)!=-1 && jQuery.inArray(arr1[i],tempSolution)!=i) {
+				arr1[i] = "colorChecked"
+			}};
+
+		for(i = 0; i < 4; i++) {
+			if	(tempSolution[jQuery.inArray(arr1[i],tempSolution)]!="checked" && arr1[i]!="colorChecked" && jQuery.inArray(arr1[i],tempSolution)!=-1) {
 				verdit.push(1);
 				tempSolution[jQuery.inArray(arr1[i],tempSolution)] = "checked";
 			}
-
-			else if	(tempSolution[jQuery.inArray(arr1[i],tempSolution)]!="checked" && jQuery.inArray(arr1[i],tempSolution)==-1){
-				verdit.push(0);
-			}
+		}
 		}
 			verdit.sort(function(a, b){return b-a});
 			fillColorButton(verdit);
@@ -137,12 +142,7 @@
         return "black";
 }
 	}
-var revealSolution = function(){
-		for(i = 0; i < 4; i++) {
-		$(".finalSolutionColorSection .colors:eq(" + i +")")
-		.css("background-color", solution[i]).text("");
-		}
-	}
+
 
 
 
